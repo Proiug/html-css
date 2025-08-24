@@ -156,7 +156,7 @@ div.video {
 }
 
 div.video > iframe {
-    position: auto;
+    position: absolute;
     top: 5%;
     left: 5%;
     width: 90%;
