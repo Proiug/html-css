@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+body{
+    background: linear-gradient( to right,#1D2024,#171D25,#1C2023,#1D2127,#1C2126,#1B242C,#1C2128,#1B2229,#1B232B,#1B232D,#1B232D,#1C222A);
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block; 
+    margin: 20px;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: rebeccapurple;
+    transition: 0.3s all;
+}
+
+#instale-btn{
+    border: 2px solid rebeccapurple;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#instale-btn:hover{
+    background-color: rebeccapurple;
+    color: white;
+}
+
+#online-players{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin: 20px 0px 0px 0px;
+}
+#playing-now{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.number-players{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: initial;
+    line-height: 0px;
+}
+
+.bolinha {
+      width: 10px;           /* largura da bolinha */
+      height: 10px;          /* altura da bolinha */
+      background-color: rgb(0, 162, 255); /* cor da bolinha */
+      border-radius: 50%;     /* deixa a forma redonda */
+    }
+
+.video {
+    opacity: 1;
+    display: block;
+}
+
+
+h1{
+    font-weight: 200;
+}
+
+main{
+    line-height: 20px;
+}
+
+h2{
+    font-size: 45px;
+    font-weight: 200;
+    line-height: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+form [type="submit"]{
+    background-color: blue;
+    height: 50px;
+    width: 40%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+form [type="submit"]:hover{
+    cursor: pointer;
+}
+
+input{
+    margin-top: 20px;
+    height: 35px;
+    padding: 30px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+}
