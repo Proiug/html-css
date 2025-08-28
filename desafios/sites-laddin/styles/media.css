@@ -31,4 +31,8 @@
         text-align: center;
         padding: 10px;
     }
+ul.btn{
+    width: 100%;
+}
+
 }
