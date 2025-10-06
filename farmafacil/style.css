@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo geral */
+body {
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #ae99e9 0%, #87d2e9 100%);
+}
+
+body header nav h1{
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+/* Cabeçalho */
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 30px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header ul li a:hover {
+  color: #ffffff;
+}
+
+/* Seções */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea, form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #00aaff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #0088cc;
+}
+
+/* Rodapé */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
