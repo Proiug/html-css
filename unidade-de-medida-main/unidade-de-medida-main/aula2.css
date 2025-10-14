@@ -1,0 +1,427 @@
+/* RESET GERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* CORPO */
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* CABEÇALHO */
+.header {
+    background-color: #000;
+    color: #ff0909;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* SEÇÃO DE FUNDO */
+.banner {
+    background-image: url("img/imgg.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 15rem 0;
+    box-shadow: inset 0 0 100px #000;
+    filter: brightness(0.7);
+}
+
+/* CONTAINERS */
+.grid {
+    background-color: #111;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+/* CAIXAS */
+.box {
+    background: linear-gradient(180deg, #1a0000, #000);
+    color: #fff;
+    font-size: 1.3rem;
+    width: 25%;
+    min-width: 280px;
+    height: 18rem;
+    border: 2px solid #b30000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #b30000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFEITO HOVER */
+.box:hover {
+    transform: scale(1.05);
+    border-color: #ff0000;
+    box-shadow: 0 0 35px #ff0000;
+    animation: piscar 1.2s infinite;
+}
+
+/* ANIMAÇÃO PISCAR */
+@keyframes piscar {
+    0%, 100% {
+        text-shadow: 0 0 10px #ff0000;
+        color: #fff;
+    }
+    50% {
+        text-shadow: 0 0 25px #ff0000;
+        color: #ff0000;
+    }
+}
+
+/* CONTEÚDO INTERNO DAS BOXES (h1, p, button) */
+.box h1 {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+    font-family: "Nosifer", "Creepster", sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.box p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #ff0000;
+    position: relative;
+    z-index: 1;
+}
+
+.box button {
+    background-color: #ff0000;
+    border: none;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px #ff0000;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.box button:hover {
+    background-color: #fff;
+    color: #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+    transform: scale(1.1);
+}
+
+/* BRILHO PULSANTE DENTRO DAS BOXES */
+.box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(rgba(255, 0, 0, 0.05), transparent 70%);
+    animation: pulse 4s infinite;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* ============================= */
+/* SEÇÃO HIGHLIGHT (CARD PRINCIPAL) */
+/* ============================= */
+.highlight {
+  background: radial-gradient(circle at center, #1a0000, #000);
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFEITO DE NÉVOA/ENERGIA */
+.highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(rgba(255, 0, 0, 0.05), transparent 70%);
+  animation: fogMove 10s infinite linear;
+  z-index: 0;
+}
+
+.highlight .card {
+  background: linear-gradient(180deg, #1a0000, #000);
+  border: 2px solid #b30000;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #b30000;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  overflow: hidden;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.highlight .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px #ff0000;
+}
+
+/* IMAGEM */
+.highlight .card img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  flex: 1;
+}
+
+/* INFORMAÇÕES */
+.highlight .info {
+  flex: 1;
+  padding: 2rem;
+  color: #fff;
+}
+
+.highlight .info h2 {
+  font-family: "Nosifer", "Creepster", sans-serif;
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.highlight .info .subtitle {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.highlight .info .desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* LISTA DE DETALHES */
+.highlight .details {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.highlight .details li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.highlight .details strong {
+  color: #ff0000;
+}
+
+/* BOTÃO */
+.highlight .button {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px #ff0000;
+  transition: all 0.3s;
+}
+
+.highlight .button:hover {
+  background-color: #fff;
+  color: #ff0000;
+  box-shadow: 0 0 25px #ff0000;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+footer {
+    background: linear-gradient(180deg, #000000 0%, #1a0000 100%);
+    color: #e6e6e6;
+    font-family: "Creepster", "Nosifer", sans-serif;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid #b30000;
+}
+
+/* Névoa */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(rgba(255, 0, 0, 0.05), transparent 70%);
+    animation: fogMove 10s infinite linear;
+    z-index: 0;
+}
+
+@keyframes fogMove {
+    from { transform: translateX(-10%); }
+    to { transform: translateX(10%); }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+    margin-bottom: 15px;
+    font-family: "Nosifer", cursive;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* Ícones sociais */
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-icon {
+    color: #ff0000;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #ff0000;
+    transform: scale(1.2);
+}
+
+/* Rodapé final */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #999;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+@media (max-width: 1024px) {
+    .box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.6rem;
+    }
+
+    .banner {
+        padding: 10rem 0;
+    }
+
+    .box {
+        width: 80%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .highlight .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight .card img {
+        width: 100%;
+    }
+
+    .highlight .info {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.3rem;
+        padding: 1.5rem;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .highlight .info h2 {
+        font-size: 1.6rem;
+    }
+}
