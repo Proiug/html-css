@@ -5,6 +5,7 @@
     --panel: #111827;
     --accent: #08a0f7;
     --muted: #9aa4b2;
+    --btn: #1f2937
     --btn-accent: #0b75b8;
     --glass: rgba(255, 255, 255, 0.03);
     font-family: Roboto;
@@ -23,7 +24,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg var,(--bf, #071019));
+    background: linear-gradient(180deg, var(--bg), #071019);
     padding: 24px;
     color: #e6eef6;
 }
@@ -50,4 +51,61 @@ justify-content: center;
 gap: 16px;
 margin-bottom: 14px;
 word-break: break-all;
+}
+
+.small {
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-align: right;
+    opacity: 0.95;
+}
+.large {
+    font-size: 1.6rem;
+    text-align: right;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    word-wrap: break-word;
+}
+
+/*grid de botoes*/
+
+.pad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: var(--btn);
+    border: 0;
+    color: inherit;
+    padding: 14px 12px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: transform 0.08s ease, 
+        box-shadow 0.08s ease, 
+        background 0.12s ease; 
+    box-shadow: 0 4px 8px rgba( 2, 6, 23, 0.5);
+    user-select: none; 
+        }
+
+button:active{
+    transform: translateY(1px) scale(0.997);
+}
+
+.btn-op{
+    background: linear-gradient( 180deg);
+    background-color: #095e95;
+}
+
+.btn-igual {
+    grid-column: span 2;
+}
+
+.btn-accent-soft {
+    background: linear-gradient(
+        180deg, #13202b, #0f1b24
+    );
+    color: var(--muted);
 }
