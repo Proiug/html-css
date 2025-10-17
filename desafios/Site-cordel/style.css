@@ -54,22 +54,38 @@ section{
     padding-left: 30px;
     font-family: var(--font3);
     font-size: 1.3em;
+    padding-bottom: 10vh;
 }
 
 section.imagem{
     background-color: yellow;
-    color: violet;
+    color: rgb(255, 255, 255);
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.637);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.imagem > p{
     width: 400px;
-    background-color: rgba(0, 0, 0, 0.685);
+    background-color: rgba(0, 0, 0, 0.411);
+    text-shadow: 1px 1px 0px black;
 }
 
 section.normal{
-    background-color: white;
-    color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
+
+
+section#img01{
+    background-image: url(../Site-cordel/imagens/background001.jpg);
+    background-position: right center;
+    }
+
+
+    section#img02{
+    background-image: url(../Site-cordel/imagens/background002.jpg);
+    }
 
 footer{
     background-color: black;
